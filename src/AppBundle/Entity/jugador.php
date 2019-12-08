@@ -14,45 +14,45 @@ use Doctrine\ORM\Mapping as ORM;
 class jugador
 {
     /**
+     * @var int
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="auto")
      * @ORM\Column(type="integer")
-     * @var int
      */
 
     private $id;
 
     /**
-     * @ORM\Column(type="text")
      * @var string
+     * @ORM\Column(type="text")
      */
 
     private $nombre;
 
     /**
-     * @ORM\Column(type="text")
      * @var string
+     * @ORM\Column(type="text")
      */
 
     private $apellido;
 
     /**
-     * @ORM\Column(type="string")
      * @var string
+     * @ORM\Column(type="string")
      */
 
     private $dni;
 
     /**
-     * @ORM\Column(type="text")
      * @var string
+     * @ORM\Column(type="text")
      */
 
     private $nacionalidad;
 
     /**
-     * @ORM\Column(type="boolean")
      * @var bool
+     * @ORM\Column(type="boolean")
      */
 
     private $jugador;
@@ -60,6 +60,7 @@ class jugador
     /**
      * @return int
      */
+
     public function getId()
     {
         return $this->id;
@@ -68,6 +69,7 @@ class jugador
     /**
      * @return string
      */
+
     public function getNombre()
     {
         return $this->nombre;
@@ -76,6 +78,7 @@ class jugador
     /**
      * @param string $nombre
      */
+
     public function setNombre($nombre)
     {
         $this->nombre = $nombre;
@@ -84,6 +87,7 @@ class jugador
     /**
      * @return string
      */
+
     public function getApellido()
     {
         return $this->apellido;
@@ -92,6 +96,7 @@ class jugador
     /**
      * @param string $apellido
      */
+
     public function setApellido($apellido)
     {
         $this->apellido = $apellido;
@@ -100,6 +105,7 @@ class jugador
     /**
      * @return string
      */
+
     public function getDni()
     {
         return $this->dni;
@@ -108,6 +114,7 @@ class jugador
     /**
      * @param string $dni
      */
+
     public function setDni($dni)
     {
         $this->dni = $dni;
@@ -116,6 +123,7 @@ class jugador
     /**
      * @return string
      */
+
     public function getNacionalidad()
     {
         return $this->nacionalidad;
@@ -124,6 +132,7 @@ class jugador
     /**
      * @param string $nacionalidad
      */
+
     public function setNacionalidad($nacionalidad)
     {
         $this->nacionalidad = $nacionalidad;
@@ -132,6 +141,7 @@ class jugador
     /**
      * @return bool
      */
+
     public function isJugador()
     {
         return $this->jugador;
@@ -140,12 +150,10 @@ class jugador
     /**
      * @param bool $jugador
      */
+
     public function setJugador($jugador)
     {
         $this->jugador = $jugador;
     }
-
-
-
 
 }
