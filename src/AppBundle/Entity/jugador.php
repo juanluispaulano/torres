@@ -55,7 +55,7 @@ class jugador
      * @ORM\Column(type="boolean")
      */
 
-    private $jugador;
+    private $capitan;
 
     /**
      * @return int
@@ -142,18 +142,18 @@ class jugador
      * @return bool
      */
 
-    public function isJugador()
+    public function isCapitan()
     {
-        return $this->jugador;
+        return $this->capitan;
     }
 
     /**
-     * @param bool $jugador
+     * @param bool $capitan
      */
 
-    public function setJugador($jugador)
+    public function setCapitan($capitan)
     {
-        $this->jugador = $jugador;
+        $this->capitan = $capitan;
     }
 
 }
