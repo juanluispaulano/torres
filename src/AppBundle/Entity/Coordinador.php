@@ -2,16 +2,15 @@
 
 
 namespace AppBundle\Entity;
-
-
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Class jugador
+ * Class Coordinador
  * @ORM\Entity
- * @ORM\Table(name="Jugador")
+ * @ORM\Table(name="Coordinador")
  */
-class jugador
+
+class Coordinador
 {
     /**
      * @var int
@@ -44,23 +43,15 @@ class jugador
     private $dni;
 
     /**
-     * @var string
-     * @ORM\Column(type="text")
+     * @var int
+     * @ORM\Column(type="integer")
      */
 
-    private $nacionalidad;
-
-    /**
-     * @var bool
-     * @ORM\Column(type="boolean")
-     */
-
-    private $capitan;
+    private $edad;
 
     /**
      * @return int
      */
-
     public function getId()
     {
         return $this->id;
@@ -69,7 +60,6 @@ class jugador
     /**
      * @return string
      */
-
     public function getNombre()
     {
         return $this->nombre;
@@ -78,7 +68,6 @@ class jugador
     /**
      * @param string $nombre
      */
-
     public function setNombre($nombre)
     {
         $this->nombre = $nombre;
@@ -87,7 +76,6 @@ class jugador
     /**
      * @return string
      */
-
     public function getApellido()
     {
         return $this->apellido;
@@ -96,7 +84,6 @@ class jugador
     /**
      * @param string $apellido
      */
-
     public function setApellido($apellido)
     {
         $this->apellido = $apellido;
@@ -105,7 +92,6 @@ class jugador
     /**
      * @return string
      */
-
     public function getDni()
     {
         return $this->dni;
@@ -114,46 +100,26 @@ class jugador
     /**
      * @param string $dni
      */
-
     public function setDni($dni)
     {
         $this->dni = $dni;
     }
 
     /**
-     * @return string
+     * @return int
      */
-
-    public function getNacionalidad()
+    public function getEdad()
     {
-        return $this->nacionalidad;
+        return $this->edad;
     }
 
     /**
-     * @param string $nacionalidad
+     * @param int $edad
      */
-
-    public function setNacionalidad($nacionalidad)
+    public function setEdad($edad)
     {
-        $this->nacionalidad = $nacionalidad;
+        $this->edad = $edad;
     }
 
-    /**
-     * @return bool
-     */
-
-    public function isCapitan()
-    {
-        return $this->capitan;
-    }
-
-    /**
-     * @param bool $capitan
-     */
-
-    public function setCapitan($capitan)
-    {
-        $this->capitan = $capitan;
-    }
 
 }

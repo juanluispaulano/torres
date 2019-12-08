@@ -8,10 +8,10 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * Class equipo
  * @ORM\Entity
- * @ORM\Table(name="Equipos")
+ * @ORM\Table(name="Equipo")
  */
 
-class equipo
+class Equipo
 {
     /**
      * @var int
