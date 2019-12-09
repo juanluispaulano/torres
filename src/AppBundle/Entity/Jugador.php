@@ -77,11 +77,13 @@ class Jugador
 
     /**
      * @param string $nombre
+     * @return Jugador
      */
 
     public function setNombre($nombre)
     {
         $this->nombre = $nombre;
+        return $this;
     }
 
     /**
@@ -95,11 +97,13 @@ class Jugador
 
     /**
      * @param string $apellido
+     * @return Jugador
      */
 
     public function setApellido($apellido)
     {
         $this->apellido = $apellido;
+        return $this;
     }
 
     /**
@@ -113,11 +117,13 @@ class Jugador
 
     /**
      * @param string $dni
+     * @return Jugador
      */
 
     public function setDni($dni)
     {
         $this->dni = $dni;
+        return $this;
     }
 
     /**
@@ -131,11 +137,13 @@ class Jugador
 
     /**
      * @param string $nacionalidad
+     * @return Jugador
      */
 
     public function setNacionalidad($nacionalidad)
     {
         $this->nacionalidad = $nacionalidad;
+        return $this;
     }
 
     /**
@@ -149,11 +157,13 @@ class Jugador
 
     /**
      * @param bool $capitan
+     * @return Jugador
      */
 
     public function setCapitan($capitan)
     {
         $this->capitan = $capitan;
+        return $this;
     }
 
 }

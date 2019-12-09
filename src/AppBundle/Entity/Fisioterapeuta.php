@@ -67,10 +67,12 @@ class Fisioterapeuta
 
     /**
      * @param string $nombre
+     * @return Fisioterapeuta
      */
     public function setNombre($nombre)
     {
         $this->nombre = $nombre;
+        return $this;
     }
 
     /**
@@ -83,10 +85,12 @@ class Fisioterapeuta
 
     /**
      * @param string $apellido
+     * @return Fisioterapeuta
      */
     public function setApellido($apellido)
     {
         $this->apellido = $apellido;
+        return $this;
     }
 
     /**
@@ -99,10 +103,12 @@ class Fisioterapeuta
 
     /**
      * @param int $edad
+     * @return Fisioterapeuta
      */
     public function setEdad($edad)
     {
         $this->edad = $edad;
+        return $this;
     }
 
     /**
@@ -115,10 +121,12 @@ class Fisioterapeuta
 
     /**
      * @param string $nacionalidad
+     * @return Fisioterapeuta
      */
     public function setNacionalidad($nacionalidad)
     {
         $this->nacionalidad = $nacionalidad;
+        return $this;
     }
 
 

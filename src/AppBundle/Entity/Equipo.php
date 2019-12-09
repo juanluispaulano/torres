@@ -69,10 +69,12 @@ class Equipo
 
     /**
      * @param string $nombre
+     * @return Equipo
      */
     public function setNombre($nombre)
     {
         $this->nombre = $nombre;
+        return $this;
     }
 
     /**
@@ -86,11 +88,13 @@ class Equipo
 
     /**
      * @param int $numPremios
+     * @return Equipo
      */
 
     public function setNumPremios($numPremios)
     {
         $this->numPremios = $numPremios;
+        return $this;
     }
 
     /**
@@ -104,11 +108,13 @@ class Equipo
 
     /**
      * @param int $puestoClasificacion
+     * @return Equipo
      */
 
     public function setPuestoClasificacion($puestoClasificacion)
     {
         $this->puestoClasificacion = $puestoClasificacion;
+        return $this;
     }
 
     /**
@@ -121,11 +127,13 @@ class Equipo
 
     /**
      * @param bool $tieneBajas
+     * @return Equipo
      */
 
     public function setTieneBajas($tieneBajas)
     {
         $this->tieneBajas = $tieneBajas;
+        return $this;
     }
 
 

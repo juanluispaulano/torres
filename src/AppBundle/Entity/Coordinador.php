@@ -67,10 +67,12 @@ class Coordinador
 
     /**
      * @param string $nombre
+     * @return Coordinador
      */
     public function setNombre($nombre)
     {
         $this->nombre = $nombre;
+        return $this;
     }
 
     /**
@@ -83,10 +85,12 @@ class Coordinador
 
     /**
      * @param string $apellido
+     * @return Coordinador
      */
     public function setApellido($apellido)
     {
         $this->apellido = $apellido;
+        return $this;
     }
 
     /**
@@ -99,10 +103,12 @@ class Coordinador
 
     /**
      * @param string $dni
+     * @return Coordinador
      */
     public function setDni($dni)
     {
         $this->dni = $dni;
+        return $this;
     }
 
     /**
@@ -115,10 +121,12 @@ class Coordinador
 
     /**
      * @param int $edad
+     * @return Coordinador
      */
     public function setEdad($edad)
     {
         $this->edad = $edad;
+        return $this;
     }
 
 
