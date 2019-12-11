@@ -52,14 +52,14 @@ class Jugador
 
     /**
      * @var bool
-     * @ORM\Column(type="boolean")
+     * @ORM\Column(type="boolean", nullable=true)
      */
 
     private $capitan;
 
     /**
-     * @ORM\ManyToOne(targetEntity="Equipo")
-     * @var equipo
+     * @ORM\ManyToOne(targetEntity="Equipo", inversedBy="jugadores")
+     * @var Equipo
      */
 
     private $equipo;
@@ -174,7 +174,7 @@ class Jugador
     }
 
     /**
-     * @return equipo
+     * @return Equipo
      */
     public function getEquipo()
     {
@@ -182,14 +182,14 @@ class Jugador
     }
 
     /**
-     * @param equipo $equipo
+     * @param Equipo $equipo
      * @return Equipo
      */
+
     public function setEquipo($equipo)
     {
         $this->equipo = $equipo;
-        return $this;
+        return $equipo;
     }
-
 
 }
