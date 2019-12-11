@@ -58,6 +58,13 @@ class Jugador
     private $capitan;
 
     /**
+     * @ORM\ManyToOne(targetEntity="Equipo")
+     * @var equipo
+     */
+
+    private $equipo;
+
+    /**
      * @return int
      */
 
@@ -165,5 +172,24 @@ class Jugador
         $this->capitan = $capitan;
         return $this;
     }
+
+    /**
+     * @return equipo
+     */
+    public function getEquipo()
+    {
+        return $this->equipo;
+    }
+
+    /**
+     * @param equipo $equipo
+     * @return Equipo
+     */
+    public function setEquipo($equipo)
+    {
+        $this->equipo = $equipo;
+        return $this;
+    }
+
 
 }
