@@ -58,6 +58,20 @@ class Jugador
     private $capitan;
 
     /**
+     * @ORM\ManyToOne(targetEntity="Equipo")
+     * @var equipo
+     */
+
+    private $equipo;
+
+    /**
+     * @var bool
+     * @ORM\Column(type="boolean"
+     */
+
+    private $baja;
+
+    /**
      * @return int
      */
 
@@ -165,5 +179,45 @@ class Jugador
         $this->capitan = $capitan;
         return $this;
     }
+
+    /**
+     * @return equipo
+     */
+
+    public function getEquipo()
+    {
+        return $this->equipo;
+    }
+
+    /**
+     * @param equipo $equipo
+     * @return Equipo
+     */
+    public function setEquipo($equipo)
+    {
+        $this->equipo = $equipo;
+        return $equipo;
+    }
+
+    /**
+     * @return bool
+     */
+    public function isBaja()
+    {
+        return $this->baja;
+    }
+
+    /**
+     * @param bool $baja
+     * @return Jugador
+     */
+
+    public function setBaja($baja)
+    {
+        $this->baja = $baja;
+        return $this;
+    }
+
+
 
 }
