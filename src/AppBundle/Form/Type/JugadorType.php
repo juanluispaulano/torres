@@ -14,14 +14,13 @@ class JugadorType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('Id')
-            ->add('Nombre')
-            ->add('Apellido')
-            ->add('DNI')
-            ->add('Nacionalidad')
-            ->add('¿Es capitán?')
-            ->add('¿Dado de baja?')
-            ->add('Equipo del que forma parte');
+            ->add('nombre')
+            ->add('apellido')
+            ->add('dni')
+            ->add('nacionalidad')
+            ->add('capitan')
+            ->add('baja')
+            ->add('equipo');
     }
 
     public function configureOptions(OptionsResolver $resolver)
