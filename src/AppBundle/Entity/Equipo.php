@@ -4,6 +4,7 @@
 namespace AppBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Doctrine\Common\Collections\ArrayCollection;
 
 /**
  * Class equipo
@@ -49,6 +50,22 @@ class Equipo
      */
 
     private $tieneBajas;
+
+    /**
+     * @ORM\OneToMany("targetEntity="Jugador", mappedBy="equipo");
+     * @var Jugador[]
+     */
+
+    private $jugadores;
+
+    /**
+     * Equipo constructor.
+     */
+
+    public function __construct()
+    {
+        $this->jugadores = new ArrayCollection();
+    }
 
     /**
      * @return int
@@ -136,5 +153,24 @@ class Equipo
         return $this;
     }
 
+    /**
+     * @return Jugador[]
+     */
+
+    public function getJugadores()
+    {
+        return $this->jugadores;
+    }
+
+    /**
+     * @param Jugador[] $jugadores
+     * @return Equipo
+     */
+
+    public function setJugadores($jugadores)
+    {
+        $this->jugadores = $jugadores;
+        return $this;
+    }
 
 }
