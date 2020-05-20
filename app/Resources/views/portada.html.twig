@@ -1,0 +1,37 @@
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+    <h1>NBA</h1>
+
+    {% if app.user %}
+        {% if app.user.jugadores|length  > 0 %}
+            <h2></h2>
+            <table class="table table-bordered table-striped table-hover">
+                <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Nº de Premios</th>
+                    <th>Puesto en la Clasificación</th>
+                    <th>¿Tiene bajas?</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for equipo in app.user.jugadores %}
+                    <tr>
+                        <td>{{ equipo.nombre }}</td>
+                        <td>{{ equipo.numPremios }}</td>
+                        <td>{{ equipo.PuestoClasificacion }}</td>
+                        <td>{{ equipo.tieneBajas }}</td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        {% else %}
+            <h2>No hay jugadores en el equipo</h2>
+        {% endif %}
+    {% endif %}
+{% endblock %}
+
+{% block title %}
+    NBA
+{% endblock %}
